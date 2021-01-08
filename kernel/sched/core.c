@@ -113,8 +113,6 @@ bool su_visible(void)
 	kuid_t uid = current_uid();
 	if (su_running())
 		return true;
-	if (uid_eq(uid, GLOBAL_ROOT_UID) || uid_eq(uid, GLOBAL_SYSTEM_UID))
-		return true;
 	return false;
 }
 
